@@ -66,11 +66,30 @@ public class TimuController extends BaseController {
     @RequestMapping(value = "/list")
     @ResponseBody
     public Object list(String condition) {
+		System.out.println("condition:"+condition);
+
     	if (ToolUtil.isEmpty(condition)) {
             return timuService.selectList(null);
 		}else {
 			EntityWrapper<Timu> wrapper=new EntityWrapper<>();
 			Wrapper<Timu> result=wrapper.like("timu_name", condition);
+			return timuService.selectList(result);	 
+		}
+    }
+    
+    /**
+     * 根据shitino获取题目管理列表
+     */
+    @RequestMapping(value = "/list/{shitiNo}")
+    @ResponseBody
+    public Object listbyshitino(@PathVariable Integer shitiNo) {
+		System.out.println("shitiNo:"+shitiNo);
+
+    	if (ToolUtil.isEmpty(shitiNo)) {
+            return timuService.selectList(null);
+		}else {
+			EntityWrapper<Timu> wrapper=new EntityWrapper<>();
+			Wrapper<Timu> result=wrapper.where("timu_shiti_no='"+shitiNo+"'");
 			return timuService.selectList(result);	 
 		}
     }

@@ -59,7 +59,7 @@ public class ShitiController extends BaseController {
     }
 
     /**
-     * 获取试题管理列表
+     * 模糊查询列表
      */
     @RequestMapping(value = "/list")
     @ResponseBody

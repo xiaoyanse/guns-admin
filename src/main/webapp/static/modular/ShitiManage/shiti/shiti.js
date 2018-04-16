@@ -61,7 +61,7 @@ Shiti.openShitiDetail = function () {
         var index = layer.open({
             type: 2,
             title: '试题编辑',
-            area: ['800px', '420px'], //宽高
+            area: ['90%', '90%'], //宽高
             fix: false, //不固定
             maxmin: true,
             content: Feng.ctxPath + '/shiti/shiti_update/' + Shiti.seItem.id
@@ -87,7 +87,7 @@ Shiti.delete = function () {
 };
 
 /**
- * 查询试题管理列表
+ *  查询试题管理列表
  */
 Shiti.search = function () {
     var queryData = {};

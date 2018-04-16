@@ -1,34 +1,61 @@
 @layout("/common/_container.html"){
 <div class="ibox float-e-margins">
-    <div class="ibox-content">
-        <div class="form-horizontal">
+	<div class="ibox-content">
+		<div class="form-horizontal">
 
-            <input type="hidden" id="id" value="${item.id}">
+			<input type="hidden" id="id" value="${item.id}">
 
-            <div class="row">
-                <div class="col-sm-6 b-r">
-                           <!--  <#input id="id" name="id" value="${item.id}" underline="true"/> -->
-                            <#input id="shitiNo" name="试题编号" value="${item.shitiNo}" underline="true"/>
-                            <#input id="shitiName" name="试题名称" value="${item.shitiName}" underline="true"/>
-                            <#input id="shitiNum" name="试题数量" value="${item.shitiNum}" />
-                </div>
+			<div class="row">
+				<div class="col-sm-6 b-r">
+					<!--  <#input id="id" name="id" value="${item.id}" underline="true"/> -->
+					<#input id="shitiNo" name="试题编号" value="${item.shitiNo}"
+						underline="true" />
+					<#input id="shitiName" name="试题名称" value="${item.shitiName}"
+						underline="true" />
+					<#input id="shitiNum" name="试题数量" value="${item.shitiNum}" />
+				</div>
 
-                <div class="col-sm-6">
-                            <#input id="shitiType" name="试题类型" value="${item.shitiType}" underline="true"/>
-                            <#input id="shitiAddTime" name="试题添加时间" value="${item.shitiAddTime}" underline="true"/>
-                            <#input id="shitiAddMagNo" name="试题添加人编号" value="${item.shitiAddMagNo}" />
-                </div>
-            </div>
+				<div class="col-sm-6">
+					<#input id="shitiType" name="试题类型" value="${item.shitiType}"
+						underline="true" />
+					<#input id="shitiAddTime" name="试题添加时间"
+						value="${item.shitiAddTime}" underline="true" />
+					<#input id="shitiAddMagNo" name="试题添加人编号"
+						value="${item.shitiAddMagNo}" />
+				</div>
+			</div>
 
-            <div class="row btn-group-m-t">
-                <div class="col-sm-10">
-                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="ShitiInfoDlg.editSubmit()"/>
-                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="ShitiInfoDlg.close()"/>
-                </div>
-            </div>
-        </div>
+			<div class="row">
+				<div class="hidden-xs" id="TimuTableToolbar" role="group">
+					@if(shiro.hasPermission("/timu/add")){
+					<#button name="添加" icon="fa-plus" clickFun="Timu.openAddTimu()" />
+					@} 
+					
+					@if(shiro.hasPermission("/timu/update")){
+					<#button name="修改" icon="fa-edit" clickFun="Timu.openTimuDetail()"
+						space="true" />
+					@} 
+					
+					@if(shiro.hasPermission("/timu/delete")){
+					<#button name="删除" icon="fa-remove" clickFun="Timu.delete()"
+						space="true" />
+					@}
+				</div>
+				<#table id="TimuTable" />
+			</div>
 
-    </div>
+			<div class="row btn-group-m-t">
+				<div class="col-sm-10">
+					<#button btnCss="info" name="提交" id="ensure" icon="fa-check"
+						clickFun="ShitiInfoDlg.editSubmit()" />
+					<#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser"
+						clickFun="ShitiInfoDlg.close()" />
+				</div>
+			</div>
+		</div>
+
+	</div>
 </div>
+<script src="${ctxPath}/static/modular/TimuManage/timu/timu.js"></script>
 <script src="${ctxPath}/static/modular/ShitiManage/shiti/shiti_info.js"></script>
 @}

@@ -106,9 +106,23 @@ Timu.search = function () {
     Timu.table.refresh({query: queryData});
 };
 
+/**
+ * 根据试题编号显示对应的题目
+ */
+Timu.searchByno = function () {
+    var queryData = {};
+    queryData['shitiNo'] = $("#shitiNo").val();
+    Timu.table.refresh({query: queryData});
+};
+
+
+
 $(function () {
     var defaultColunms = Timu.initColumn();
-    var table = new BSTable(Timu.id, "/timu/list", defaultColunms);
+    var shitino=$("#shitiNo").val();
+    
+//    var table = new BSTable(Timu.id, "/timu/list", defaultColunms);
+    var table = new BSTable(Timu.id, "/timu/list/"+shitino, defaultColunms);
     table.setPaginationType("client");
     Timu.table = table.init();
 });
