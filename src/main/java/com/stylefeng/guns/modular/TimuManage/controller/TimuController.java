@@ -1,5 +1,7 @@
 package com.stylefeng.guns.modular.TimuManage.controller;
 
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.stylefeng.guns.core.base.controller.BaseController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,7 +10,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.stylefeng.guns.core.log.LogObjectHolder;
+import com.stylefeng.guns.core.util.ToolUtil;
+
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.stylefeng.guns.modular.system.model.Shiti;
 import com.stylefeng.guns.modular.system.model.Timu;
 import com.stylefeng.guns.modular.TimuManage.service.ITimuService;
 
@@ -60,7 +66,13 @@ public class TimuController extends BaseController {
     @RequestMapping(value = "/list")
     @ResponseBody
     public Object list(String condition) {
-        return timuService.selectList(null);
+    	if (ToolUtil.isEmpty(condition)) {
+            return timuService.selectList(null);
+		}else {
+			EntityWrapper<Timu> wrapper=new EntityWrapper<>();
+			Wrapper<Timu> result=wrapper.like("timu_name", condition);
+			return timuService.selectList(result);	 
+		}
     }
 
     /**

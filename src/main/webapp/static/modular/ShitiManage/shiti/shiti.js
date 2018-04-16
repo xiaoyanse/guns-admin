@@ -14,13 +14,13 @@ var Shiti = {
 Shiti.initColumn = function () {
     return [
         {field: 'selectItem', radio: true},
-            {title: 'id', field: 'id', visible: true, align: 'center', valign: 'middle'},
-            {title: '试题编号', field: 'shitiNo', visible: true, align: 'center', valign: 'middle'},
-            {title: '试题名称', field: 'shitiName', visible: true, align: 'center', valign: 'middle'},
-            {title: '试题数量', field: 'shitiNum', visible: true, align: 'center', valign: 'middle'},
-            {title: '试题类型', field: 'shitiType', visible: true, align: 'center', valign: 'middle'},
-            {title: '试题添加时间', field: 'shitiAddTime', visible: true, align: 'center', valign: 'middle'},
-            {title: '试题添加人编号', field: 'shitiAddMagNo', visible: true, align: 'center', valign: 'middle'}
+            {title: 'id', field: 'id', visible: true, align: 'center', valign: 'middle' ,sortable: true},
+            {title: '试题编号', field: 'shitiNo', visible: true, align: 'center', valign: 'middle' ,sortable: true},
+            {title: '试题名称', field: 'shitiName', visible: true, align: 'center', valign: 'middle' ,sortable: true},
+            {title: '试题数量', field: 'shitiNum', visible: true, align: 'center', valign: 'middle' ,sortable: true},
+            {title: '试题类型', field: 'shitiType', visible: true, align: 'center', valign: 'middle',sortable: true},
+            {title: '试题添加时间', field: 'shitiAddTime', visible: true, align: 'center', valign: 'middle',sortable: true},
+            {title: '试题添加人编号', field: 'shitiAddMagNo', visible: true, align: 'center', valign: 'middle',sortable: true}
     ];
 };
 
@@ -60,7 +60,7 @@ Shiti.openShitiDetail = function () {
     if (this.check()) {
         var index = layer.open({
             type: 2,
-            title: '试题管理详情',
+            title: '试题编辑',
             area: ['800px', '420px'], //宽高
             fix: false, //不固定
             maxmin: true,

@@ -14,9 +14,9 @@ var Timu = {
 Timu.initColumn = function () {
     return [
         {field: 'selectItem', radio: true},
-            {title: 'id', field: 'id', visible: true, align: 'center', valign: 'middle'},
-            {title: '题目对应的试题编号', field: 'timuShitiNo', visible: true, align: 'center', valign: 'middle'},
-            {title: '题目内容', field: 'timuName', visible: true, align: 'center', valign: 'middle'},
+            {title: 'id', field: 'id', visible: true, align: 'center', valign: 'middle',sortable: true},
+            {title: '题目对应的试题编号', field: 'timuShitiNo', visible: true, align: 'center', valign: 'middle',sortable: true},
+            {title: '题目内容', field: 'timuName', visible: true, align: 'center', valign: 'middle',sortable: true},
 //            {title: '题目类型（0是单选，1是多选，2是填空）', field: 'timuType', visible: true, align: 'center', valign: 'middle'},
 //            {title: '第一个选项', field: 'timuOp1', visible: true, align: 'center', valign: 'middle'},
 //            {title: '第一个选项对应的分数', field: 'timuOp1Score', visible: true, align: 'center', valign: 'middle'},
@@ -30,8 +30,8 @@ Timu.initColumn = function () {
 //            {title: '第五个选项对应的分数', field: 'timuOp5Score', visible: true, align: 'center', valign: 'middle'},
 //            {title: '第六个选项', field: 'timuOp6', visible: true, align: 'center', valign: 'middle'},
 //            {title: '第六个选项对应的分数', field: 'timuOp6Score', visible: true, align: 'center', valign: 'middle'},
-            {title: '试题添加时间', field: 'timuAddTime', visible: true, align: 'center', valign: 'middle'},
-            {title: '管理员编号', field: 'timuAddMagNo', visible: true, align: 'center', valign: 'middle'}
+            {title: '试题添加时间', field: 'timuAddTime', visible: true, align: 'center', valign: 'middle',sortable: true},
+            {title: '管理员编号', field: 'timuAddMagNo', visible: true, align: 'center', valign: 'middle',sortable: true}
     ];
 };
 

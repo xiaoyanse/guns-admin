@@ -1,5 +1,7 @@
 package com.stylefeng.guns.modular.ShitiManage.controller;
 
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.stylefeng.guns.core.base.controller.BaseController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,6 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.stylefeng.guns.core.log.LogObjectHolder;
+import com.stylefeng.guns.core.util.ToolUtil;
+
 import org.springframework.web.bind.annotation.RequestParam;
 import com.stylefeng.guns.modular.system.model.Shiti;
 import com.stylefeng.guns.modular.ShitiManage.service.IShitiService;
@@ -60,7 +64,14 @@ public class ShitiController extends BaseController {
     @RequestMapping(value = "/list")
     @ResponseBody
     public Object list(String condition) {
-        return shitiService.selectList(null);
+    	
+    	if (ToolUtil.isEmpty(condition)) {
+            return shitiService.selectList(null);
+		}else {
+			EntityWrapper<Shiti> wrapper=new EntityWrapper<>();
+			Wrapper<Shiti> result=wrapper.like("shiti_name", condition);
+			return shitiService.selectList(result);	 
+		}
     }
 
     /**
