@@ -1,0 +1,2040 @@
+<html>
+<head>
+<title>Schema for database 'guns'</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<style type="text/css">
+<!--
+.toptext {font-family: verdana; color: #000000; font-size: 20px; font-weight: 600; width:550;  background-color:#999999; }
+.normal {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #000000}
+.fieldheader {font-family: verdana; color: #000000; font-size: 12px; font-weight: 600; width:550;  background-color:#c0c0c0; }
+.fieldcolumn {font-family: verdana; color: #000000; font-size: 10px; font-weight: 600; width:550;  background-color:#ffffff; }
+.header {background-color: #ECE9D8;}
+.headtext {font-family: verdana; color: #000000; font-size: 12; font-weight: 600; width:550;  background-color:#999999; }
+BR.page {page-break-after: always}
+//-->
+</style>
+</head>
+<body bgcolor='#ffffff' topmargin="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+<tr>
+<td class="toptext"><p align="center">guns</td>
+</tr>
+</table>
+<a name="header">&nbsp</a><ul>
+	<li><a href="#sys_dept"><p class="normal">sys_dept</a></li>
+	<li><a href="#sys_dict"><p class="normal">sys_dict</a></li>
+	<li><a href="#sys_expense"><p class="normal">sys_expense</a></li>
+	<li><a href="#sys_login_log"><p class="normal">sys_login_log</a></li>
+	<li><a href="#sys_menu"><p class="normal">sys_menu</a></li>
+	<li><a href="#sys_notice"><p class="normal">sys_notice</a></li>
+	<li><a href="#sys_operation_log"><p class="normal">sys_operation_log</a></li>
+	<li><a href="#sys_relation"><p class="normal">sys_relation</a></li>
+	<li><a href="#sys_role"><p class="normal">sys_role</a></li>
+	<li><a href="#sys_shiti"><p class="normal">sys_shiti</a></li>
+	<li><a href="#sys_timu"><p class="normal">sys_timu</a></li>
+	<li><a href="#sys_user"><p class="normal">sys_user</a></li>
+</ul>
+<br class=page>
+<p><a name='sys_dept'>&nbsp</a>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="headtext" width="30%" align="left" valign="top">sys_dept</td>
+	<td>&nbsp</td>
+<tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Fields</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="center" valign="top" class="fieldcolumn">Field</td>
+	<td align="center" valign="top" class="fieldcolumn">Type</td>
+	<td align="center" valign="top" class="fieldcolumn">Collation</td>
+	<td align="center" valign="top" class="fieldcolumn">Null</td>
+	<td align="center" valign="top" class="fieldcolumn">Key</td>
+	<td align="center" valign="top" class="fieldcolumn">Default</td>
+	<td align="center" valign="top" class="fieldcolumn">Extra</td>
+	<td align="center" valign="top" class="fieldcolumn">Privileges</td>
+	<td align="center" valign="top" class="fieldcolumn">Comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">PRI</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">auto_increment</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">主键id</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">num</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">排序</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">pid</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">父部门id</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">pids</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">父级ids</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">simplename</td>
+	<td align="left" valign="top"><p class="normal">varchar(45)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">简称</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">fullname</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">全称</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">tips</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">提示</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">version</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">版本（乐观锁保留字段）</td>
+</tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Indexes</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="left" valign="top" class="fieldcolumn">Table</td>
+	<td align="left" valign="top" class="fieldcolumn">Non<br>unique</td>
+	<td align="left" valign="top" class="fieldcolumn">Key<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Seq<br>in<br>index</td>
+	<td align="left" valign="top" class="fieldcolumn">Column<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Collation</td>
+	<td align="left" valign="top" class="fieldcolumn">Cardinality</td>
+	<td align="left" valign="top" class="fieldcolumn">Sub<br>part</td>
+	<td align="left" valign="top" class="fieldcolumn">Packed</td>
+	<td align="left" valign="top" class="fieldcolumn">Null</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>type</td>
+	<td align="left" valign="top" class="fieldcolumn">Comment</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">sys_dept</td>
+	<td align="left" valign="top"><p class="normal">0</td>
+	<td align="left" valign="top"><p class="normal">PRIMARY</td>
+	<td align="left" valign="top"><p class="normal">1</td>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">A</td>
+	<td align="left" valign="top"><p class="normal">5</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">BTREE</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+</tr>
+</table>
+
+
+<a href="#header"><p class="normal">Back</a><br class=page>
+<p><a name='sys_dict'>&nbsp</a>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="headtext" width="30%" align="left" valign="top">sys_dict</td>
+	<td>&nbsp</td>
+<tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Fields</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="center" valign="top" class="fieldcolumn">Field</td>
+	<td align="center" valign="top" class="fieldcolumn">Type</td>
+	<td align="center" valign="top" class="fieldcolumn">Collation</td>
+	<td align="center" valign="top" class="fieldcolumn">Null</td>
+	<td align="center" valign="top" class="fieldcolumn">Key</td>
+	<td align="center" valign="top" class="fieldcolumn">Default</td>
+	<td align="center" valign="top" class="fieldcolumn">Extra</td>
+	<td align="center" valign="top" class="fieldcolumn">Privileges</td>
+	<td align="center" valign="top" class="fieldcolumn">Comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">PRI</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">auto_increment</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">主键id</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">num</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">排序</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">pid</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">父级字典</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">name</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">名称</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">tips</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">提示</td>
+</tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Indexes</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="left" valign="top" class="fieldcolumn">Table</td>
+	<td align="left" valign="top" class="fieldcolumn">Non<br>unique</td>
+	<td align="left" valign="top" class="fieldcolumn">Key<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Seq<br>in<br>index</td>
+	<td align="left" valign="top" class="fieldcolumn">Column<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Collation</td>
+	<td align="left" valign="top" class="fieldcolumn">Cardinality</td>
+	<td align="left" valign="top" class="fieldcolumn">Sub<br>part</td>
+	<td align="left" valign="top" class="fieldcolumn">Packed</td>
+	<td align="left" valign="top" class="fieldcolumn">Null</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>type</td>
+	<td align="left" valign="top" class="fieldcolumn">Comment</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">sys_dict</td>
+	<td align="left" valign="top"><p class="normal">0</td>
+	<td align="left" valign="top"><p class="normal">PRIMARY</td>
+	<td align="left" valign="top"><p class="normal">1</td>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">A</td>
+	<td align="left" valign="top"><p class="normal">13</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">BTREE</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+</tr>
+</table>
+
+
+<a href="#header"><p class="normal">Back</a><br class=page>
+<p><a name='sys_expense'>&nbsp</a>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="headtext" width="30%" align="left" valign="top">sys_expense</td>
+	<td>&nbsp</td>
+<tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Fields</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="center" valign="top" class="fieldcolumn">Field</td>
+	<td align="center" valign="top" class="fieldcolumn">Type</td>
+	<td align="center" valign="top" class="fieldcolumn">Collation</td>
+	<td align="center" valign="top" class="fieldcolumn">Null</td>
+	<td align="center" valign="top" class="fieldcolumn">Key</td>
+	<td align="center" valign="top" class="fieldcolumn">Default</td>
+	<td align="center" valign="top" class="fieldcolumn">Extra</td>
+	<td align="center" valign="top" class="fieldcolumn">Privileges</td>
+	<td align="center" valign="top" class="fieldcolumn">Comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">PRI</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">auto_increment</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">money</td>
+	<td align="left" valign="top"><p class="normal">decimal(20,2)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">报销金额</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">desc</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">描述</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">createtime</td>
+	<td align="left" valign="top"><p class="normal">datetime</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">CURRENT_TIMESTAMP</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">state</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">状态: 1.待提交  2:待审核   3.审核通过 4:驳回</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">userid</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">用户id</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">processId</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">流程定义id</td>
+</tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Indexes</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="left" valign="top" class="fieldcolumn">Table</td>
+	<td align="left" valign="top" class="fieldcolumn">Non<br>unique</td>
+	<td align="left" valign="top" class="fieldcolumn">Key<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Seq<br>in<br>index</td>
+	<td align="left" valign="top" class="fieldcolumn">Column<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Collation</td>
+	<td align="left" valign="top" class="fieldcolumn">Cardinality</td>
+	<td align="left" valign="top" class="fieldcolumn">Sub<br>part</td>
+	<td align="left" valign="top" class="fieldcolumn">Packed</td>
+	<td align="left" valign="top" class="fieldcolumn">Null</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>type</td>
+	<td align="left" valign="top" class="fieldcolumn">Comment</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">sys_expense</td>
+	<td align="left" valign="top"><p class="normal">0</td>
+	<td align="left" valign="top"><p class="normal">PRIMARY</td>
+	<td align="left" valign="top"><p class="normal">1</td>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">A</td>
+	<td align="left" valign="top"><p class="normal">2</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">BTREE</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+</tr>
+</table>
+
+
+<a href="#header"><p class="normal">Back</a><br class=page>
+<p><a name='sys_login_log'>&nbsp</a>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="headtext" width="30%" align="left" valign="top">sys_login_log</td>
+	<td>&nbsp</td>
+<tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Fields</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="center" valign="top" class="fieldcolumn">Field</td>
+	<td align="center" valign="top" class="fieldcolumn">Type</td>
+	<td align="center" valign="top" class="fieldcolumn">Collation</td>
+	<td align="center" valign="top" class="fieldcolumn">Null</td>
+	<td align="center" valign="top" class="fieldcolumn">Key</td>
+	<td align="center" valign="top" class="fieldcolumn">Default</td>
+	<td align="center" valign="top" class="fieldcolumn">Extra</td>
+	<td align="center" valign="top" class="fieldcolumn">Privileges</td>
+	<td align="center" valign="top" class="fieldcolumn">Comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">int(65)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">PRI</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">auto_increment</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">主键</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">logname</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">日志名称</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">userid</td>
+	<td align="left" valign="top"><p class="normal">int(65)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">管理员id</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">createtime</td>
+	<td align="left" valign="top"><p class="normal">datetime</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">创建时间</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">succeed</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">是否执行成功</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">message</td>
+	<td align="left" valign="top"><p class="normal">text</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">具体消息</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">ip</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">登录ip</td>
+</tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Indexes</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="left" valign="top" class="fieldcolumn">Table</td>
+	<td align="left" valign="top" class="fieldcolumn">Non<br>unique</td>
+	<td align="left" valign="top" class="fieldcolumn">Key<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Seq<br>in<br>index</td>
+	<td align="left" valign="top" class="fieldcolumn">Column<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Collation</td>
+	<td align="left" valign="top" class="fieldcolumn">Cardinality</td>
+	<td align="left" valign="top" class="fieldcolumn">Sub<br>part</td>
+	<td align="left" valign="top" class="fieldcolumn">Packed</td>
+	<td align="left" valign="top" class="fieldcolumn">Null</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>type</td>
+	<td align="left" valign="top" class="fieldcolumn">Comment</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">sys_login_log</td>
+	<td align="left" valign="top"><p class="normal">0</td>
+	<td align="left" valign="top"><p class="normal">PRIMARY</td>
+	<td align="left" valign="top"><p class="normal">1</td>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">A</td>
+	<td align="left" valign="top"><p class="normal">156</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">BTREE</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+</tr>
+</table>
+
+
+<a href="#header"><p class="normal">Back</a><br class=page>
+<p><a name='sys_menu'>&nbsp</a>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="headtext" width="30%" align="left" valign="top">sys_menu</td>
+	<td>&nbsp</td>
+<tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Fields</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="center" valign="top" class="fieldcolumn">Field</td>
+	<td align="center" valign="top" class="fieldcolumn">Type</td>
+	<td align="center" valign="top" class="fieldcolumn">Collation</td>
+	<td align="center" valign="top" class="fieldcolumn">Null</td>
+	<td align="center" valign="top" class="fieldcolumn">Key</td>
+	<td align="center" valign="top" class="fieldcolumn">Default</td>
+	<td align="center" valign="top" class="fieldcolumn">Extra</td>
+	<td align="center" valign="top" class="fieldcolumn">Privileges</td>
+	<td align="center" valign="top" class="fieldcolumn">Comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">bigint(20)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">PRI</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">auto_increment</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">主键id</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">code</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">菜单编号</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">pcode</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">菜单父编号</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">pcodes</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">当前菜单的所有父菜单编号</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">name</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">菜单名称</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">icon</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">菜单图标</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">url</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">url地址</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">num</td>
+	<td align="left" valign="top"><p class="normal">int(65)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">菜单排序号</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">levels</td>
+	<td align="left" valign="top"><p class="normal">int(65)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">菜单层级</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">ismenu</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">是否是菜单（1：是  0：不是）</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">tips</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">备注</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">status</td>
+	<td align="left" valign="top"><p class="normal">int(65)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">菜单状态 :  1:启用   0:不启用</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">isopen</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">是否打开:    1:打开   0:不打开</td>
+</tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Indexes</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="left" valign="top" class="fieldcolumn">Table</td>
+	<td align="left" valign="top" class="fieldcolumn">Non<br>unique</td>
+	<td align="left" valign="top" class="fieldcolumn">Key<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Seq<br>in<br>index</td>
+	<td align="left" valign="top" class="fieldcolumn">Column<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Collation</td>
+	<td align="left" valign="top" class="fieldcolumn">Cardinality</td>
+	<td align="left" valign="top" class="fieldcolumn">Sub<br>part</td>
+	<td align="left" valign="top" class="fieldcolumn">Packed</td>
+	<td align="left" valign="top" class="fieldcolumn">Null</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>type</td>
+	<td align="left" valign="top" class="fieldcolumn">Comment</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">sys_menu</td>
+	<td align="left" valign="top"><p class="normal">0</td>
+	<td align="left" valign="top"><p class="normal">PRIMARY</td>
+	<td align="left" valign="top"><p class="normal">1</td>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">A</td>
+	<td align="left" valign="top"><p class="normal">60</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">BTREE</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+</tr>
+</table>
+
+
+<a href="#header"><p class="normal">Back</a><br class=page>
+<p><a name='sys_notice'>&nbsp</a>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="headtext" width="30%" align="left" valign="top">sys_notice</td>
+	<td>&nbsp</td>
+<tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Fields</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="center" valign="top" class="fieldcolumn">Field</td>
+	<td align="center" valign="top" class="fieldcolumn">Type</td>
+	<td align="center" valign="top" class="fieldcolumn">Collation</td>
+	<td align="center" valign="top" class="fieldcolumn">Null</td>
+	<td align="center" valign="top" class="fieldcolumn">Key</td>
+	<td align="center" valign="top" class="fieldcolumn">Default</td>
+	<td align="center" valign="top" class="fieldcolumn">Extra</td>
+	<td align="center" valign="top" class="fieldcolumn">Privileges</td>
+	<td align="center" valign="top" class="fieldcolumn">Comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">PRI</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">auto_increment</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">主键</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">title</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">标题</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">type</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">类型</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">content</td>
+	<td align="left" valign="top"><p class="normal">text</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">内容</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">createtime</td>
+	<td align="left" valign="top"><p class="normal">datetime</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">创建时间</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">creater</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">创建人</td>
+</tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Indexes</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="left" valign="top" class="fieldcolumn">Table</td>
+	<td align="left" valign="top" class="fieldcolumn">Non<br>unique</td>
+	<td align="left" valign="top" class="fieldcolumn">Key<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Seq<br>in<br>index</td>
+	<td align="left" valign="top" class="fieldcolumn">Column<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Collation</td>
+	<td align="left" valign="top" class="fieldcolumn">Cardinality</td>
+	<td align="left" valign="top" class="fieldcolumn">Sub<br>part</td>
+	<td align="left" valign="top" class="fieldcolumn">Packed</td>
+	<td align="left" valign="top" class="fieldcolumn">Null</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>type</td>
+	<td align="left" valign="top" class="fieldcolumn">Comment</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">sys_notice</td>
+	<td align="left" valign="top"><p class="normal">0</td>
+	<td align="left" valign="top"><p class="normal">PRIMARY</td>
+	<td align="left" valign="top"><p class="normal">1</td>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">A</td>
+	<td align="left" valign="top"><p class="normal">6</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">BTREE</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+</tr>
+</table>
+
+
+<a href="#header"><p class="normal">Back</a><br class=page>
+<p><a name='sys_operation_log'>&nbsp</a>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="headtext" width="30%" align="left" valign="top">sys_operation_log</td>
+	<td>&nbsp</td>
+<tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Fields</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="center" valign="top" class="fieldcolumn">Field</td>
+	<td align="center" valign="top" class="fieldcolumn">Type</td>
+	<td align="center" valign="top" class="fieldcolumn">Collation</td>
+	<td align="center" valign="top" class="fieldcolumn">Null</td>
+	<td align="center" valign="top" class="fieldcolumn">Key</td>
+	<td align="center" valign="top" class="fieldcolumn">Default</td>
+	<td align="center" valign="top" class="fieldcolumn">Extra</td>
+	<td align="center" valign="top" class="fieldcolumn">Privileges</td>
+	<td align="center" valign="top" class="fieldcolumn">Comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">int(65)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">PRI</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">auto_increment</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">主键</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">logtype</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">日志类型</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">logname</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">日志名称</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">userid</td>
+	<td align="left" valign="top"><p class="normal">int(65)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">用户id</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">classname</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">类名称</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">method</td>
+	<td align="left" valign="top"><p class="normal">text</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">方法名称</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">createtime</td>
+	<td align="left" valign="top"><p class="normal">datetime</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">创建时间</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">succeed</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">是否成功</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">message</td>
+	<td align="left" valign="top"><p class="normal">text</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">备注</td>
+</tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Indexes</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="left" valign="top" class="fieldcolumn">Table</td>
+	<td align="left" valign="top" class="fieldcolumn">Non<br>unique</td>
+	<td align="left" valign="top" class="fieldcolumn">Key<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Seq<br>in<br>index</td>
+	<td align="left" valign="top" class="fieldcolumn">Column<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Collation</td>
+	<td align="left" valign="top" class="fieldcolumn">Cardinality</td>
+	<td align="left" valign="top" class="fieldcolumn">Sub<br>part</td>
+	<td align="left" valign="top" class="fieldcolumn">Packed</td>
+	<td align="left" valign="top" class="fieldcolumn">Null</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>type</td>
+	<td align="left" valign="top" class="fieldcolumn">Comment</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">sys_operation_log</td>
+	<td align="left" valign="top"><p class="normal">0</td>
+	<td align="left" valign="top"><p class="normal">PRIMARY</td>
+	<td align="left" valign="top"><p class="normal">1</td>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">A</td>
+	<td align="left" valign="top"><p class="normal">0</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">BTREE</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+</tr>
+</table>
+
+
+<a href="#header"><p class="normal">Back</a><br class=page>
+<p><a name='sys_relation'>&nbsp</a>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="headtext" width="30%" align="left" valign="top">sys_relation</td>
+	<td>&nbsp</td>
+<tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Fields</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="center" valign="top" class="fieldcolumn">Field</td>
+	<td align="center" valign="top" class="fieldcolumn">Type</td>
+	<td align="center" valign="top" class="fieldcolumn">Collation</td>
+	<td align="center" valign="top" class="fieldcolumn">Null</td>
+	<td align="center" valign="top" class="fieldcolumn">Key</td>
+	<td align="center" valign="top" class="fieldcolumn">Default</td>
+	<td align="center" valign="top" class="fieldcolumn">Extra</td>
+	<td align="center" valign="top" class="fieldcolumn">Privileges</td>
+	<td align="center" valign="top" class="fieldcolumn">Comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">PRI</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">auto_increment</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">主键</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">menuid</td>
+	<td align="left" valign="top"><p class="normal">bigint(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">菜单id</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">roleid</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">角色id</td>
+</tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Indexes</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="left" valign="top" class="fieldcolumn">Table</td>
+	<td align="left" valign="top" class="fieldcolumn">Non<br>unique</td>
+	<td align="left" valign="top" class="fieldcolumn">Key<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Seq<br>in<br>index</td>
+	<td align="left" valign="top" class="fieldcolumn">Column<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Collation</td>
+	<td align="left" valign="top" class="fieldcolumn">Cardinality</td>
+	<td align="left" valign="top" class="fieldcolumn">Sub<br>part</td>
+	<td align="left" valign="top" class="fieldcolumn">Packed</td>
+	<td align="left" valign="top" class="fieldcolumn">Null</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>type</td>
+	<td align="left" valign="top" class="fieldcolumn">Comment</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">sys_relation</td>
+	<td align="left" valign="top"><p class="normal">0</td>
+	<td align="left" valign="top"><p class="normal">PRIMARY</td>
+	<td align="left" valign="top"><p class="normal">1</td>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">A</td>
+	<td align="left" valign="top"><p class="normal">140</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">BTREE</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+</tr>
+</table>
+
+
+<a href="#header"><p class="normal">Back</a><br class=page>
+<p><a name='sys_role'>&nbsp</a>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="headtext" width="30%" align="left" valign="top">sys_role</td>
+	<td>&nbsp</td>
+<tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Fields</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="center" valign="top" class="fieldcolumn">Field</td>
+	<td align="center" valign="top" class="fieldcolumn">Type</td>
+	<td align="center" valign="top" class="fieldcolumn">Collation</td>
+	<td align="center" valign="top" class="fieldcolumn">Null</td>
+	<td align="center" valign="top" class="fieldcolumn">Key</td>
+	<td align="center" valign="top" class="fieldcolumn">Default</td>
+	<td align="center" valign="top" class="fieldcolumn">Extra</td>
+	<td align="center" valign="top" class="fieldcolumn">Privileges</td>
+	<td align="center" valign="top" class="fieldcolumn">Comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">PRI</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">auto_increment</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">主键id</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">num</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">序号</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">pid</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">父角色id</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">name</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">角色名称</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">deptid</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">部门名称</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">tips</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">提示</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">version</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">保留字段(暂时没用）</td>
+</tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Indexes</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="left" valign="top" class="fieldcolumn">Table</td>
+	<td align="left" valign="top" class="fieldcolumn">Non<br>unique</td>
+	<td align="left" valign="top" class="fieldcolumn">Key<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Seq<br>in<br>index</td>
+	<td align="left" valign="top" class="fieldcolumn">Column<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Collation</td>
+	<td align="left" valign="top" class="fieldcolumn">Cardinality</td>
+	<td align="left" valign="top" class="fieldcolumn">Sub<br>part</td>
+	<td align="left" valign="top" class="fieldcolumn">Packed</td>
+	<td align="left" valign="top" class="fieldcolumn">Null</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>type</td>
+	<td align="left" valign="top" class="fieldcolumn">Comment</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">sys_role</td>
+	<td align="left" valign="top"><p class="normal">0</td>
+	<td align="left" valign="top"><p class="normal">PRIMARY</td>
+	<td align="left" valign="top"><p class="normal">1</td>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">A</td>
+	<td align="left" valign="top"><p class="normal">5</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">BTREE</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+</tr>
+</table>
+
+
+<a href="#header"><p class="normal">Back</a><br class=page>
+<p><a name='sys_shiti'>&nbsp</a>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="headtext" width="30%" align="left" valign="top">sys_shiti</td>
+	<td>&nbsp</td>
+<tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Fields</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="center" valign="top" class="fieldcolumn">Field</td>
+	<td align="center" valign="top" class="fieldcolumn">Type</td>
+	<td align="center" valign="top" class="fieldcolumn">Collation</td>
+	<td align="center" valign="top" class="fieldcolumn">Null</td>
+	<td align="center" valign="top" class="fieldcolumn">Key</td>
+	<td align="center" valign="top" class="fieldcolumn">Default</td>
+	<td align="center" valign="top" class="fieldcolumn">Extra</td>
+	<td align="center" valign="top" class="fieldcolumn">Privileges</td>
+	<td align="center" valign="top" class="fieldcolumn">Comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">PRI</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">auto_increment</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">id</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">shiti_no</td>
+	<td align="left" valign="top"><p class="normal">char(12)</td>
+	<td align="left" valign="top"><p class="normal">utf8_bin</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">PRI</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">试题编号</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">shiti_name</td>
+	<td align="left" valign="top"><p class="normal">char(60)</td>
+	<td align="left" valign="top"><p class="normal">utf8_bin</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">试题名称</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">shiti_num</td>
+	<td align="left" valign="top"><p class="normal">int(12)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">试题数量</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">shiti_type</td>
+	<td align="left" valign="top"><p class="normal">char(32)</td>
+	<td align="left" valign="top"><p class="normal">utf8_bin</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">试题类型</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">shiti_add_time</td>
+	<td align="left" valign="top"><p class="normal">char(32)</td>
+	<td align="left" valign="top"><p class="normal">utf8_bin</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">试题添加时间</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">shiti_add_mag_no</td>
+	<td align="left" valign="top"><p class="normal">char(32)</td>
+	<td align="left" valign="top"><p class="normal">utf8_bin</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">试题添加人编号</td>
+</tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Indexes</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="left" valign="top" class="fieldcolumn">Table</td>
+	<td align="left" valign="top" class="fieldcolumn">Non<br>unique</td>
+	<td align="left" valign="top" class="fieldcolumn">Key<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Seq<br>in<br>index</td>
+	<td align="left" valign="top" class="fieldcolumn">Column<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Collation</td>
+	<td align="left" valign="top" class="fieldcolumn">Cardinality</td>
+	<td align="left" valign="top" class="fieldcolumn">Sub<br>part</td>
+	<td align="left" valign="top" class="fieldcolumn">Packed</td>
+	<td align="left" valign="top" class="fieldcolumn">Null</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>type</td>
+	<td align="left" valign="top" class="fieldcolumn">Comment</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">sys_shiti</td>
+	<td align="left" valign="top"><p class="normal">0</td>
+	<td align="left" valign="top"><p class="normal">PRIMARY</td>
+	<td align="left" valign="top"><p class="normal">1</td>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">A</td>
+	<td align="left" valign="top"><p class="normal">17</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">BTREE</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">sys_shiti</td>
+	<td align="left" valign="top"><p class="normal">0</td>
+	<td align="left" valign="top"><p class="normal">PRIMARY</td>
+	<td align="left" valign="top"><p class="normal">2</td>
+	<td align="left" valign="top"><p class="normal">shiti_no</td>
+	<td align="left" valign="top"><p class="normal">A</td>
+	<td align="left" valign="top"><p class="normal">17</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">BTREE</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">sys_shiti</td>
+	<td align="left" valign="top"><p class="normal">0</td>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">1</td>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">A</td>
+	<td align="left" valign="top"><p class="normal">17</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">BTREE</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+</tr>
+</table>
+
+
+<a href="#header"><p class="normal">Back</a><br class=page>
+<p><a name='sys_timu'>&nbsp</a>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="headtext" width="30%" align="left" valign="top">sys_timu</td>
+	<td>&nbsp</td>
+<tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Fields</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="center" valign="top" class="fieldcolumn">Field</td>
+	<td align="center" valign="top" class="fieldcolumn">Type</td>
+	<td align="center" valign="top" class="fieldcolumn">Collation</td>
+	<td align="center" valign="top" class="fieldcolumn">Null</td>
+	<td align="center" valign="top" class="fieldcolumn">Key</td>
+	<td align="center" valign="top" class="fieldcolumn">Default</td>
+	<td align="center" valign="top" class="fieldcolumn">Extra</td>
+	<td align="center" valign="top" class="fieldcolumn">Privileges</td>
+	<td align="center" valign="top" class="fieldcolumn">Comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">PRI</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">auto_increment</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">id</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">timu_shiti_no</td>
+	<td align="left" valign="top"><p class="normal">char(32)</td>
+	<td align="left" valign="top"><p class="normal">utf8_bin</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">题目对应的试题编号</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">timu_name</td>
+	<td align="left" valign="top"><p class="normal">char(200)</td>
+	<td align="left" valign="top"><p class="normal">utf8_bin</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">题目内容</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">timu_type</td>
+	<td align="left" valign="top"><p class="normal">int(3)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">题目类型（0是单选，1是多选，2是填空）</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">timu_op1</td>
+	<td align="left" valign="top"><p class="normal">char(32)</td>
+	<td align="left" valign="top"><p class="normal">utf8_bin</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">第一个选项</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">timu_op1_score</td>
+	<td align="left" valign="top"><p class="normal">int(3)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">第一个选项对应的分数</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">timu_op2</td>
+	<td align="left" valign="top"><p class="normal">char(32)</td>
+	<td align="left" valign="top"><p class="normal">utf8_bin</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">第二个选项</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">timu_op2_score</td>
+	<td align="left" valign="top"><p class="normal">int(3)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">第二个选项对应的分数</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">timu_op3</td>
+	<td align="left" valign="top"><p class="normal">char(32)</td>
+	<td align="left" valign="top"><p class="normal">utf8_bin</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">第三个选项</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">timu_op3_score</td>
+	<td align="left" valign="top"><p class="normal">int(3)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">第三个选项对应的分数</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">timu_op4</td>
+	<td align="left" valign="top"><p class="normal">char(32)</td>
+	<td align="left" valign="top"><p class="normal">utf8_bin</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">第四个选项</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">timu_op4_score</td>
+	<td align="left" valign="top"><p class="normal">int(3)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">第四个选项对应的分数</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">timu_op5</td>
+	<td align="left" valign="top"><p class="normal">char(32)</td>
+	<td align="left" valign="top"><p class="normal">utf8_bin</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">第五个选项</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">timu_op5_score</td>
+	<td align="left" valign="top"><p class="normal">int(3)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">第五个选项对应的分数</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">timu_op6</td>
+	<td align="left" valign="top"><p class="normal">char(32)</td>
+	<td align="left" valign="top"><p class="normal">utf8_bin</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">第六个选项</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">timu_op6_score</td>
+	<td align="left" valign="top"><p class="normal">int(3)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">第六个选项对应的分数</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">timu_add_time</td>
+	<td align="left" valign="top"><p class="normal">char(32)</td>
+	<td align="left" valign="top"><p class="normal">utf8_bin</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">试题添加时间</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">timu_add_mag_no</td>
+	<td align="left" valign="top"><p class="normal">char(32)</td>
+	<td align="left" valign="top"><p class="normal">utf8_bin</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">管理员编号</td>
+</tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Indexes</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="left" valign="top" class="fieldcolumn">Table</td>
+	<td align="left" valign="top" class="fieldcolumn">Non<br>unique</td>
+	<td align="left" valign="top" class="fieldcolumn">Key<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Seq<br>in<br>index</td>
+	<td align="left" valign="top" class="fieldcolumn">Column<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Collation</td>
+	<td align="left" valign="top" class="fieldcolumn">Cardinality</td>
+	<td align="left" valign="top" class="fieldcolumn">Sub<br>part</td>
+	<td align="left" valign="top" class="fieldcolumn">Packed</td>
+	<td align="left" valign="top" class="fieldcolumn">Null</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>type</td>
+	<td align="left" valign="top" class="fieldcolumn">Comment</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">sys_timu</td>
+	<td align="left" valign="top"><p class="normal">0</td>
+	<td align="left" valign="top"><p class="normal">PRIMARY</td>
+	<td align="left" valign="top"><p class="normal">1</td>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">A</td>
+	<td align="left" valign="top"><p class="normal">10</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">BTREE</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+</tr>
+</table>
+
+
+<a href="#header"><p class="normal">Back</a><br class=page>
+<p><a name='sys_user'>&nbsp</a>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="headtext" width="30%" align="left" valign="top">sys_user</td>
+	<td>&nbsp</td>
+<tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Fields</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="center" valign="top" class="fieldcolumn">Field</td>
+	<td align="center" valign="top" class="fieldcolumn">Type</td>
+	<td align="center" valign="top" class="fieldcolumn">Collation</td>
+	<td align="center" valign="top" class="fieldcolumn">Null</td>
+	<td align="center" valign="top" class="fieldcolumn">Key</td>
+	<td align="center" valign="top" class="fieldcolumn">Default</td>
+	<td align="center" valign="top" class="fieldcolumn">Extra</td>
+	<td align="center" valign="top" class="fieldcolumn">Privileges</td>
+	<td align="center" valign="top" class="fieldcolumn">Comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">NO</td>
+	<td align="left" valign="top"><p class="normal">PRI</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">auto_increment</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">主键id</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">avatar</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">头像</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">account</td>
+	<td align="left" valign="top"><p class="normal">varchar(45)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">账号</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">password</td>
+	<td align="left" valign="top"><p class="normal">varchar(45)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">密码</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">salt</td>
+	<td align="left" valign="top"><p class="normal">varchar(45)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">md5密码盐</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">name</td>
+	<td align="left" valign="top"><p class="normal">varchar(45)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">名字</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">birthday</td>
+	<td align="left" valign="top"><p class="normal">datetime</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">生日</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">sex</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">性别（1：男 2：女）</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">email</td>
+	<td align="left" valign="top"><p class="normal">varchar(45)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">电子邮件</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">phone</td>
+	<td align="left" valign="top"><p class="normal">varchar(45)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">电话</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">roleid</td>
+	<td align="left" valign="top"><p class="normal">varchar(255)</td>
+	<td align="left" valign="top"><p class="normal">utf8_general_ci</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">角色id</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">deptid</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">部门id</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">status</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">状态(1：启用  2：冻结  3：删除）</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">createtime</td>
+	<td align="left" valign="top"><p class="normal">datetime</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">创建时间</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">version</td>
+	<td align="left" valign="top"><p class="normal">int(11)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">YES</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">select,insert,update,references</td>
+	<td align="left" valign="top"><p class="normal">保留字段</td>
+</tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+<tr>
+	<td class="fieldheader" width="100%" align="left" valign="top">Indexes</td>
+</tr>
+</table>
+<table width="100%" cellspacing="0" cellapdding="2" border="1">
+<tr>
+	<td align="left" valign="top" class="fieldcolumn">Table</td>
+	<td align="left" valign="top" class="fieldcolumn">Non<br>unique</td>
+	<td align="left" valign="top" class="fieldcolumn">Key<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Seq<br>in<br>index</td>
+	<td align="left" valign="top" class="fieldcolumn">Column<br>name</td>
+	<td align="left" valign="top" class="fieldcolumn">Collation</td>
+	<td align="left" valign="top" class="fieldcolumn">Cardinality</td>
+	<td align="left" valign="top" class="fieldcolumn">Sub<br>part</td>
+	<td align="left" valign="top" class="fieldcolumn">Packed</td>
+	<td align="left" valign="top" class="fieldcolumn">Null</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>type</td>
+	<td align="left" valign="top" class="fieldcolumn">Comment</td>
+	<td align="left" valign="top" class="fieldcolumn">Index<br>comment</td>
+</tr>
+<tr>
+	<td align="left" valign="top"><p class="normal">sys_user</td>
+	<td align="left" valign="top"><p class="normal">0</td>
+	<td align="left" valign="top"><p class="normal">PRIMARY</td>
+	<td align="left" valign="top"><p class="normal">1</td>
+	<td align="left" valign="top"><p class="normal">id</td>
+	<td align="left" valign="top"><p class="normal">A</td>
+	<td align="left" valign="top"><p class="normal">16</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">(NULL)</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">BTREE</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+	<td align="left" valign="top"><p class="normal">&nbsp;</td>
+</tr>
+</table>
+
+
+<a href="#header"><p class="normal">Back</a>
+<h1 width="100%"></body>
+</html>

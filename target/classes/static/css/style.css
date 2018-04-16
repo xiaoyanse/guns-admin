@@ -4816,10 +4816,10 @@ body.modal-open {
 }
 
 .logo-name {
-    color: #e6e6e6;
-    font-size: 180px;
+    color: #1bb394;
+    font-size: 80px;
     font-weight: 800;
-    letter-spacing: -10px;
+    letter-spacing: 10px;
     margin-bottom: 0px;
 }
 
