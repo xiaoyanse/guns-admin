@@ -1,0 +1,45 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="id" underline="true"/>
+                            <#input id="timuShitiNo" name="题目对应的试题编号" underline="true"/>
+                            <#input id="timuName" name="题目内容" underline="true"/>
+                            <#input id="timuType" name="题目类型（0是单选，1是多选，2是填空）" underline="true"/>
+                            <#input id="timuOp1" name="第一个选项" underline="true"/>
+                            <#input id="timuOp1Score" name="第一个选项对应的分数" underline="true"/>
+                            <#input id="timuOp2" name="第二个选项" underline="true"/>
+                            <#input id="timuOp2Score" name="第二个选项对应的分数" underline="true"/>
+                            <#input id="timuOp3" name="第三个选项"/>
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="timuOp3Score" name="第三个选项对应的分数" underline="true"/>
+                            <#input id="timuOp4" name="第四个选项" underline="true"/>
+                            <#input id="timuOp4Score" name="第四个选项对应的分数" underline="true"/>
+                            <#input id="timuOp5" name="第五个选项" underline="true"/>
+                            <#input id="timuOp5Score" name="第五个选项对应的分数" underline="true"/>
+                            <#input id="timuOp6" name="第六个选项" underline="true"/>
+                            <#input id="timuOp6Score" name="第六个选项对应的分数" underline="true"/>
+                            <#input id="timuAddTime" name="试题添加时间" underline="true"/>
+                            <#input id="timuAddMagNo" name="管理员编号" underline="true"/>
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="TimuInfoDlg.addSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="TimuInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/TimuManage/timu/timu_info.js"></script>
+@}

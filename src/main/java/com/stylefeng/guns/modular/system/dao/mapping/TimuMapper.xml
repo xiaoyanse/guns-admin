@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.system.dao.TimuMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.modular.system.model.Timu">
+        <id column="id" property="id" />
+        <result column="timu_shiti_no" property="timuShitiNo" />
+        <result column="timu_name" property="timuName" />
+        <result column="timu_type" property="timuType" />
+        <result column="timu_op1" property="timuOp1" />
+        <result column="timu_op1_score" property="timuOp1Score" />
+        <result column="timu_op2" property="timuOp2" />
+        <result column="timu_op2_score" property="timuOp2Score" />
+        <result column="timu_op3" property="timuOp3" />
+        <result column="timu_op3_score" property="timuOp3Score" />
+        <result column="timu_op4" property="timuOp4" />
+        <result column="timu_op4_score" property="timuOp4Score" />
+        <result column="timu_op5" property="timuOp5" />
+        <result column="timu_op5_score" property="timuOp5Score" />
+        <result column="timu_op6" property="timuOp6" />
+        <result column="timu_op6_score" property="timuOp6Score" />
+        <result column="timu_add_time" property="timuAddTime" />
+        <result column="timu_add_mag_no" property="timuAddMagNo" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, timu_shiti_no AS timuShitiNo, timu_name AS timuName, timu_type AS timuType, timu_op1 AS timuOp1, timu_op1_score AS timuOp1Score, timu_op2 AS timuOp2, timu_op2_score AS timuOp2Score, timu_op3 AS timuOp3, timu_op3_score AS timuOp3Score, timu_op4 AS timuOp4, timu_op4_score AS timuOp4Score, timu_op5 AS timuOp5, timu_op5_score AS timuOp5Score, timu_op6 AS timuOp6, timu_op6_score AS timuOp6Score, timu_add_time AS timuAddTime, timu_add_mag_no AS timuAddMagNo
+    </sql>
+
+</mapper>
