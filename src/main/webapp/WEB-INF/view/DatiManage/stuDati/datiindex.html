@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>心之语</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="${ctxPath}/static/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="${ctxPath}/static/assets/font-awesome/css/font-awesome.min.css">		
+	<link href="https://fonts.googleapis.com/css?family=Istok+Web" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">
+	<link rel="stylesheet" href="${ctxPath}/static/assets/css/magnific-popup.css">
+	<link rel="stylesheet" type="text/css" href="${ctxPath}/static/assets/css/main.css">
+	<link rel="stylesheet" href="${ctxPath}/static/assets/css/scl90test.css" type="text/css">
+</head>
+
+<body>
+	<section class="head" id="header">
+		<div class="wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<header class="header">
+							<div class="inner">
+								<!-- Logo -->
+								<a href="#menu"class="nav-bars">
+									<img src="${ctxPath}/static/images/nav_icon.svg" class="img-responsive" alt="Collapsable Navbar">
+								</a>
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="${ctxPath}/static/images/logo.png" alt="Title" /></span><span class="title">心之语</span>
+                                </a>
+							</div>
+						</header>
+						<!-- Menu -->
+						<nav id="menu">
+                    <ul class=" m-t-xs">
+                        <li>
+                            <span>
+                                <img alt="image" class="img-circle" 
+                                    @if(isEmpty(avatar)){ 
+                                        src="${ctxPath}/static/img/girl.gif" 
+                                    @}else{ 
+                                        src="${ctxPath}/kaptcha/${avatar}"
+                                    @} 
+                                        width="64px" height="64px" />
+                             </span>
+                             <br>
+                        </li>
+
+                        <li><a class="J_menuItem" href="${ctxPath}/mgr/user_info_stu">个人资料</a></li>
+                        <li><a class="J_menuItem" href="${ctxPath}/stuDati">考试首页</a></li>
+                        <li><a class="J_menuItem" href="${ctxPath}/mgr/user_info">考试记录</</li>
+                        <li><a class="J_menuItem" href="${ctxPath}/mgr/user_chpwd">修改密码</a></li>
+                        <li><a href="${ctxPath}/logout">安全退出</a></li>
+                    </ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    <div class="wrapper wrapper-content">
+    ${layoutContent}
+    </div>
+
+
+		<!-- Scripts -->
+
+		<script src="${ctxPath}/static/assets/js/jquery-3.1.0.min.js"></script>
+		<script src="${ctxPath}/static/assets/js/bootstrap.min.js"></script>
+		<script src="${ctxPath}/static/assets/js/jquery.magnific-popup.min.js"></script>
+
+		<script src="${ctxPath}/static/assets/js/script.js"></script>
+
+		<!--  ===== Scroll to Top ====  -->
+		<script>
+			if ($('#back-to-top').length) {
+				$('#back-to-top').on('click', function (e) {
+					e.preventDefault();
+					$('html,body').animate({
+						scrollTop: 0
+					}, 700);
+				});
+			}
+		</script>
+
+	</body>
+	</html>

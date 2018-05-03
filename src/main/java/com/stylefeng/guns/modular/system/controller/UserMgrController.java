@@ -122,6 +122,22 @@ public class UserMgrController extends BaseController {
         LogObjectHolder.me().set(user);
         return PREFIX + "user_view.html";
     }
+    /**
+     * 跳转到查看学生用户详情页面
+     */
+    @RequestMapping("/user_info_stu")
+    public String userInfo2(Model model) {
+        Integer userId = ShiroKit.getUser().getId();
+        if (ToolUtil.isEmpty(userId)) {
+            throw new GunsException(BizExceptionEnum.REQUEST_NULL);
+        }
+        User user = this.userService.selectById(userId);
+        model.addAttribute(user);
+        model.addAttribute("roleName", ConstantFactory.me().getRoleName(user.getRoleid()));
+        model.addAttribute("deptName", ConstantFactory.me().getDeptName(user.getDeptid()));
+        LogObjectHolder.me().set(user);
+        return PREFIX + "user_view_stu.html";
+    }
 
     /**
      * 跳转到修改密码界面

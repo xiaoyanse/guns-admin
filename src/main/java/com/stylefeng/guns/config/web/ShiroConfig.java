@@ -163,6 +163,7 @@ public class ShiroConfig {
         hashMap.put("/global/sessionError", "anon");
         hashMap.put("/kaptcha", "anon");
         hashMap.put("/**", "user");
+        hashMap.put("/static/soundofheart/**", "user");
         shiroFilter.setFilterChainDefinitionMap(hashMap);
         return shiroFilter;
     }
